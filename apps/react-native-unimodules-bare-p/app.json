@@ -1,0 +1,12 @@
+{
+  "name": "react-native-unimodules-bare-p",
+  "displayName": "react-native-unimodules-bare-p",
+  "expo": {
+    "name": "react-native-unimodules-bare-p",
+    "slug": "react-native-unimodules-bare-p",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
