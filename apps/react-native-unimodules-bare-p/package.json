@@ -10,5 +10,12 @@
   "jest": {
     "preset": "react-native"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "react-native-unimodules": "*",
+    "expo-status-bar": "*",
+    "react": "*",
+    "react-native": "*",
+    "expo": "*"
+  }
 }

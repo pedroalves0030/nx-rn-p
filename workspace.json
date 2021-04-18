@@ -1,10 +1,150 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
+  "projects": {
+    "react-native-unimodules-bare-p": {
+      "root": "apps/react-native-unimodules-bare-p",
+      "sourceRoot": "apps/react-native-unimodules-bare-p/src",
+      "projectType": "application",
+      "generators": {},
+      "targets": {
+        "start": {
+          "executor": "@nrwl/react-native:start",
+          "options": {
+            "port": 8081
+          }
+        },
+        "run-ios": {
+          "executor": "@nrwl/react-native:run-ios",
+          "options": {}
+        },
+        "bundle-ios": {
+          "executor": "@nrwl/react-native:bundle",
+          "outputs": [
+            "apps/react-native-unimodules-bare-p/build"
+          ],
+          "options": {
+            "entryFile": "apps/react-native-unimodules-bare-p/index.js",
+            "platform": "ios",
+            "bundleOutput": "dist/apps/react-native-unimodules-bare-p/ios/index.bundle"
+          }
+        },
+        "run-android": {
+          "executor": "@nrwl/react-native:run-android",
+          "options": {}
+        },
+        "build-android": {
+          "executor": "@nrwl/react-native:build-android",
+          "outputs": [
+            "apps/react-native-unimodules-bare-p/android/app/build/outputs/bundle",
+            "apps/react-native-unimodules-bare-p/android/app/build/outputs/apk"
+          ],
+          "options": {}
+        },
+        "bundle-android": {
+          "executor": "@nrwl/react-native:bundle",
+          "options": {
+            "entryFile": "apps/react-native-unimodules-bare-p/index.js",
+            "platform": "android",
+            "bundleOutput": "dist/apps/react-native-unimodules-bare-p/android/index.bundle"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/react-native-unimodules-bare-p/**/*.{js,ts,tsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/react-native-unimodules-bare-p/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "awesome-app": {
+      "root": "apps/awesome-app",
+      "sourceRoot": "apps/awesome-app/src",
+      "projectType": "application",
+      "generators": {},
+      "targets": {
+        "start": {
+          "executor": "@nrwl/react-native:start",
+          "options": {
+            "port": 8081
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "nx start awesome-app"
+          }
+        },
+        "run-ios": {
+          "executor": "@nrwl/react-native:run-ios",
+          "options": {}
+        },
+        "bundle-ios": {
+          "executor": "@nrwl/react-native:bundle",
+          "outputs": [
+            "apps/awesome-app/build"
+          ],
+          "options": {
+            "entryFile": "apps/awesome-app/src/main.tsx",
+            "platform": "ios",
+            "bundleOutput": "dist/apps/awesome-app/ios/main.bundle"
+          }
+        },
+        "run-android": {
+          "executor": "@nrwl/react-native:run-android",
+          "options": {}
+        },
+        "build-android": {
+          "executor": "@nrwl/react-native:build-android",
+          "outputs": [
+            "apps/awesome-app/android/app/build/outputs/bundle",
+            "apps/awesome-app/android/app/build/outputs/apk"
+          ],
+          "options": {}
+        },
+        "bundle-android": {
+          "executor": "@nrwl/react-native:bundle",
+          "options": {
+            "entryFile": "apps/awesome-app/src/main.tsx",
+            "platform": "android",
+            "bundleOutput": "dist/apps/awesome-app/android/main.bundle"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/awesome-app/**/*.{js,ts,tsx}"
+            ]
+          }
+        },
+        "sync-deps": {
+          "executor": "@nrwl/react-native:sync-deps",
+          "options": {}
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/awesome-app"
+          ],
+          "options": {
+            "jestConfig": "apps/awesome-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
-  }
+  },
+  "defaultProject": "awesome-app"
 }
